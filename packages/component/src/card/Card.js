@@ -3,7 +3,7 @@ export class CardComponent extends HTMLElement {
         super();
         const shadowRoot = this.attachShadow({mode: 'open'});
         const template = document.createElement('template');
-        template.innerHTML = `        
+        template.innerHTML = `
         <style>
                 ::slotted(*) {
                         padding-left: var(--padding-lg);

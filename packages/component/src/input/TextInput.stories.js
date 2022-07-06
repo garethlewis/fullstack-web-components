@@ -1,4 +1,5 @@
 import {TextInputComponent} from "./TextInput";
+import {ButtonComponent} from "../button/Button";
 import {html} from "lit-html";
 
 const validators = {
@@ -117,7 +118,7 @@ const FormTemplate = ({headline, onSubmit, onValidate, onFormData}) => {
                         pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
                         class="form-control"
                 ></in-textinput>
-                <input class="submit" type="submit" value="Submit">
+                <button class="primary submit" is="in-button" type="submit">Submit</button>
             </fieldset>
         </form>
     `;

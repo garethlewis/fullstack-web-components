@@ -25,6 +25,7 @@ export function validate(elem: any, showError: boolean) {
             if (showError) {
                 if (elem.$input) {
                     elem.$input.classList.add("error");
+                    elem.$input.setAttribute("aria-invalid", "true");
                 }
                 if (messageElem) {
                     const div = document.createElement("div");
@@ -41,6 +42,7 @@ export function validate(elem: any, showError: boolean) {
         elem.setValidity({});
         if (elem.$input) {
             elem.$input.classList.remove("error");
+            elem.$input.removeAttribute("aria-invalid");
         }
         if (messageElem) {
             messageElem.innerHTML = "";
